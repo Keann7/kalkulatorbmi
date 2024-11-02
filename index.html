@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Kalkulator BMI</h1>
+
+      <form class="calculator">
+        <div>
+          <label for="weight">Berat Badan (kg)</label>
+          <input
+            type="number"
+            id="weight"
+            min="0"
+            step="any"
+            value="0"
+            inputmode="decimal"
+            onfocus="if (this.value === '0') this.value = ''"
+          />
+        </div>
+
+        <div>
+          <label for="height">Tinggi Badan (cm)</label>
+          <input
+            type="number"
+            id="height"
+            min="0"
+            step="any"
+            value="0"
+            inputmode="decimal"
+            onfocus="if (this.value === '0') this.value = ''"
+          />
+        </div>
+
+        <div>
+          <button type="reset">Reset</button>
+          <button type="submit">Hitung</button>
+        </div>
+      </form>
+
+      <section class="output">
+        <h3>Hasil BMI Anda</h3>
+        <p id="bmi">0</p>
+        <p id="desc">N/A</p>
+        <p id="extra-category"></p>
+      </section>
+
+      <section class="bmi-scale">
+        <div style="--color: var(--underweight)">
+          <h4>Berat Badan Kurang</h4>
+          <p>&lt; 18.5</p>
+        </div>
+
+        <div style="--color: var(--normal)">
+          <h4>Berat Badan Normal</h4>
+          <p>18.5 – 22.9</p>
+        </div>
+
+        <div style="--color: var(--overweight)">
+          <h4>Kelebihan Berat Badan</h4>
+          <p>23 – 24.9</p>
+        </div>
+
+        <div style="--color: var(--obese1)">
+            <h4>Obesitas 1</h4>
+            <p>≥ 25 - 29.9</p>
+        </div>
+
+        <div style="--color: var(--obese2)">
+          <h4>Obesitas 2</h4>
+          <p>≥ 30</p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
