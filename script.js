@@ -53,22 +53,22 @@ function interpretBMI(bmi) {
 
   let label, cssClass, extraCategory;
 
-  if (bmi < 17.0) {
+  if (bmi < 18.5) {
     label = bmiLabels.underweight;
     cssClass = "underweight";
     extraCategory = extraCategories.veryUnderweight;
-  } else if (bmi < 18.5) {
-    label = bmiLabels.underweight;
-    cssClass = "underweight";
-    extraCategory = extraCategories.underweight;
-  } else if (bmi < 25.0) {
+  } else if (bmi < 22.9) {
     label = bmiLabels.healthy;
     cssClass = "healthy";
     extraCategory = extraCategories.normal;
-  } else if (bmi < 27.0) {
+  } else if (bmi < 24.9) {
     label = bmiLabels.overweight;
     cssClass = "overweight";
     extraCategory = extraCategories.slightlyOverweight;
+  } else if (bmi < 29.9) {
+    label = bmiLabels.obese1;
+    cssClass = "obese1";
+    extraCategory = extraCategories.overweight;
   } else {
     label = bmiLabels.obese2;
     cssClass = "obese2";
